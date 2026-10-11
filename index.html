@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webnex | Sites e Sistemas</title>
+
+<link rel="icon" type="image/png" href="https://instagram.fplu1-1.fna.fbcdn.net/v/t51.82787-19/834947621_17982709901897606_4094395787685448368_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=2636pgym0qYQ7kNvwGGJK-A&_nc_oc=AdoNa1BmIbcb98lTKMOKVtgtDUqgqx0hAYa1ktUXOtKX-9Ud5v9d-LNxplTSmqJDM8pEkF_wfJSzwTXLUN55rPer&_nc_zt=24&_nc_ht=instagram.fplu1-1.fna&_nc_gid=KtLiqTMenADkb3xTp9MtBQ&_nc_ss=7b6a8&oh=00_AQOXu55CzRLfJXOcgqyUHJEkg9xDRu-5OrqtBQLWbuQ-3A&oe=6AD11022">
+<link rel="stylesheet" href="">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00A8FF;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 28px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00A8FF;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: radial-gradient(circle at center, #061626 0%, #0a0a0a 70%);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #00A8FF;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #aaa;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #006BFF, #00A8FF);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 25px rgba(0, 168, 255, 0.35);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 168, 255, 0.5);
+}
+
+/* Seções */
+section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.section-title span {
+  color: #00A8FF;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+/* Serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  border-color: #00A8FF;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 168, 255, 0.15);
+}
+
+.service-icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #00A8FF;
+  box-shadow: 0 15px 40px rgba(0, 168, 255, 0.15);
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #1a1a1a;
+}
+
+.project-info {
+  padding: 25px;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.project-info p {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.project-tag {
+  display: inline-block;
+  background: rgba(0, 168, 255, 0.15);
+  color: #00A8FF;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+}
+
+/* Contato */
+.contact {
+  text-align: center;
+  background: radial-gradient(circle at center, #061626 0%, #0a0a0a 70%);
+}
+
+.contact p {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 1.15rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #555;
+  border-top: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+}
+
+/* Ícones dos serviços */
+.sites,
+.e-commercess,
+.sistema,
+.Landing {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="logo">Webnex</div>
+<nav>
+<a href="#servicos">Serviços</a>
+<a href="#projetos">Projetos</a>
+<a href="#contato">Contato</a>
+</nav>
+</header>
+<!-- Hero -->
+<section class="hero">
+<h1>Sites que <span>valorizam</span><br>sua marca</h1>
+<p>Design + Tecnologia + Performance. Criamos sites, sistemas e e-commerces que geram resultado.</p>
+<a href="#contato" class="btn">Solicitar Orçamento</a>
+</section>
+<!-- Serviços -->
+<section id="servicos">
+<h2 class="section-title">Nossos <span>Serviços</span></h2>
+<p class="section-subtitle">Soluções completas para o seu negócio crescer online</p>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><img src="imgs/1.png" alt="" class="sites"></div>
+<h3>Sites Institucionais</h3>
+<p>Sites modernos, rápidos e otimizados para apresentar sua empresa com profissionalismo.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><img src="imgs/imagem_2026-10-11_024245352-removebg-preview.png" alt="" class="e-commercess"></div>
+<h3>E-commerce</h3>
+<p>Lojas virtuais completas com catálogo, carrinho e integração com WhatsApp.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><img src="https://cdn-icons-png.flaticon.com/512/11096/11096817.png" alt="" class="sistema"></div>
+<h3>Sistemas Web</h3>
+<p>Sistemas personalizados para gestão, controle e automação do seu negócio.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><img src="https://cdn-icons-png.flaticon.com/512/3867/3867462.png" alt="" class="Landing"></div>
+<h3>Landing Pages</h3>
+<p>Páginas de alta conversão focadas em captar clientes e gerar vendas.</p>
+</div>
+</div>
+</section>
+<!-- Projetos -->
+<section id="projetos">
+<h2 class="section-title">Projetos <span>Recentes</span></h2>
+<p class="section-subtitle">Alguns trabalhos que desenvolvemos</p>
+<div class="projects-grid">
+<!-- Projeto 1 -->
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Banker Imports" class="project-img">
+<div class="project-info">
+<h3>Banker Imports</h3>
+<p>Loja virtual de produtos gamer com catálogo e integração WhatsApp.</p>
+<span class="project-tag">E-commerce</span>
+<span class="project-tag">WhatsApp</span>
+</div>
+</div>
+<!-- Projeto 2 -->
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&h=400&fit=crop" alt="Caxxin" class="project-img">
+<div class="project-info">
+<h3>Caxxin</h3>
+<p>Linktree personalizado para criador de conteúdo gamer.</p>
+<span class="project-tag">Linktree</span>
+<span class="project-tag">Personalizado</span>
+</div>
+</div>
+<!-- Projeto 3 -->
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Projeto Futuro" class="project-img">
+<div class="project-info">
+<h3>Seu próximo projeto</h3>
+<p>Estamos prontos para transformar a presença digital da sua empresa.</p>
+<span class="project-tag">Em breve</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contato -->
+<section id="contato" class="contact">
+<h2 class="section-title">Vamos conversar?</h2>
+<p>Quer um site profissional para o seu negócio? Entre em contato e solicite um orçamento.</p>
+<a href="https://wa.me/5535991181143?text=Olá!%20Vi%20o%20portfólio%20da%20Webnex%20e%20quero%20solicitar%20um%20orçamento." class="btn" target="_blank">
+
+      Falar no WhatsApp
+</a>
+</section>
+<footer>
+
+    © 2026 Webnex • Sites e Sistemas • Feito por Luiz Felipe
+</footer>
+</body>
+</html>
+ 
